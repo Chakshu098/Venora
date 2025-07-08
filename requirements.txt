@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+httpx
+pydantic
+python-dotenv
+httpx
+gTTS
+pydub
+ffmpeg-python
