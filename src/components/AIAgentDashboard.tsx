@@ -62,6 +62,13 @@ export const AIAgentDashboard = () => {
   const avgMood = Math.round(agents.reduce((sum, agent) => sum + agent.mood, 0) / agents.length);
   const activeAgents = agents.filter(agent => agent.status === 'active').length;
 
+  <button onClick={handleAskAgent}>Ask Marketing Agent</button>
+const handleAskAgent = async () => {
+  const reply = await sendTask('marketing', 'Create a fun post for a new AI tool');
+  alert(reply); // Or show in UI
+};
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#FAF8F4] to-[#F4A261]/5">
       {/* Header */}
