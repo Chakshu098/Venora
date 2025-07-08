@@ -8,6 +8,12 @@ import { ChatInterface } from './ChatInterface';
 import { useStore } from '../store/useStore';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import toast from 'react-hot-toast';
+import { sendTask } from '../api/api';
+
+const handleAskAgent = async () => {
+  const reply = await sendTask('marketing', 'Create a fun ad for a new phone');
+  console.log('Agent says:', reply);
+};
 
 const mockAnalyticsData = [
   { name: 'Mon', tasks: 24, completed: 20 },
